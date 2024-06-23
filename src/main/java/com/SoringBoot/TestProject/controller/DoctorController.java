@@ -29,11 +29,13 @@ public class DoctorController {
 
     @PostMapping
     public ResponseEntity<?> save(@RequestBody Doctor doctor){
+
         return ResponseEntity.ok(doctorService.save(doctor));
     }
 
     @GetMapping
     public ResponseEntity<?> getAll() {
+
         return ResponseEntity.ok(doctorService.getAll());
     }
 
